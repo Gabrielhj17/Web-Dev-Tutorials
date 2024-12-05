@@ -10,38 +10,19 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-}
-
-.logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2c3e50;
-    text-decoration: none;
-}
-
-nav ul {
     display: flex;
-    list-style: none;
+    flex-direction: column;
+    min-height: 100vh;  /* Ensure the body takes at least the full height of the viewport */
 }
 
-nav ul li {
-    margin-left: 1.5rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #34495e;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #f39c12;
-}
-
-nav ul li a.active {
-    color: #f39c12;
-    font-weight: bold;
+/* Define new JavaScript logo color scheme */
+:root {
+    --primary-color: #F7DF1E; /* JavaScript Yellow */
+    --secondary-color: #D8C100; /* Dark Yellow/Orange for accents */
+    --background-light: #FEF7C2; /* Light Yellow for background */
+    --background-white: #ffffff; /* White background */
+    --text-dark: #333; /* Dark text for headings */
+    --text-light: #666; /* Light gray for body text */
 }
 
 /* Main Content Styles */
@@ -49,16 +30,22 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    flex-grow: 1; /* Allows the main content to take up remaining space */
 }
 
 /* Hero Section */
 .hero {
-    background-color: #f39c12;
-    color: white;
+    background-color: var(--primary-color);
+    color: white; /* Ensure the text is visible */
     text-align: center;
     padding: 4rem 2rem;
     border-radius: 10px;
     margin-bottom: 2rem;
+    height: auto; /* Let height grow based on content */
+    min-height: 300px; /* Set a minimum height */
+    display: flex; /* Use flex to align content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
 }
 
 .hero h1 {
@@ -73,13 +60,20 @@ main {
 
 .cta-button {
     display: inline-block;
-    background-color: #ffffff;
-    color: #f39c12;
+    background-color: #ffffff; /* White background */
+    color: var(--primary-color); /* Text color based on HTML logo */
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    width: auto; 
+    max-width: 300px; /* Set a maximum width to prevent it from becoming too large */
+    margin-left: auto;
+    margin-right: auto; /* Center the button horizontally */
 }
 
 .cta-button:hover {
@@ -95,7 +89,7 @@ main {
 .concepts h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #2c3e50;
+    color: var(--text-dark);
 }
 
 .concepts-list {
@@ -105,7 +99,7 @@ main {
 }
 
 .concept-item {
-    background-color: white;
+    background-color: var(--background-white);
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -118,31 +112,116 @@ main {
 }
 
 .concept-item h3 {
-    color: #f39c12;
+    color: var(--primary-color);
     margin-bottom: 0.75rem;
 }
 
 .concept-item p {
-    color: #7f8c8d;
+    color: var(--text-light);
+}
+
+/* Tutorial Page Layout */
+.tutorial-page {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    height: 100%;
+    width: 100%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px; /* Fixed width for sidebar */
+    background-color: var(--background-white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 1rem;
+    height: 600px; /* Fixed height for sidebar */
+    overflow-y: auto; /* Scrollable if content exceeds height */
+}
+
+/* Tutorial List */
+.tutorial-list {
+    list-style: none;
+}
+
+.tutorial-list li {
+    margin-bottom: 1rem;
+}
+
+.tutorial-list a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.tutorial-list a:hover {
+    color: var(--secondary-color);
+}
+
+/* Active Link */
+.tutorial-list a.active {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Content Section */
+.tutorial-content {
+    flex: 0 1 850px; /* Fixed width for content area */
+    background-color: var(--background-white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    height: 600px; /* Fixed height for content area */
+    overflow-y: auto; /* Scrollable if content exceeds height */
+}
+
+.tutorial-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.tutorial-content h2 {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--background-light);
+    padding-bottom: 0.5rem;
+}
+
+.tutorial-content p {
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+/* Hide inactive sections by default */
+.tutorial-content article {
+    display: none;
+}
+
+.tutorial-content article.active {
+    display: block;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        margin-top: 1rem;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-
     .hero {
         padding: 2rem 1rem;
     }
@@ -153,5 +232,21 @@ main {
 
     .hero p {
         font-size: 1rem;
+    }
+
+    .tutorial-page {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 1rem;
+        height: auto; /* Allow sidebar to expand with content on smaller screens */
+    }
+
+    .tutorial-content {
+        padding: 1.5rem;
+        height: auto; /* Allow content to expand as well on smaller screens */
+        width: 100%; /* Full width when on small screens */
     }
 }
