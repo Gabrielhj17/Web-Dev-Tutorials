@@ -17,8 +17,8 @@ body {
 
 /* Define new JavaScript logo color scheme */
 :root {
-    --primary-color: #F7DF1E; /* JavaScript Yellow */
-    --secondary-color: #D8C100; /* Dark Yellow/Orange for accents */
+    --primary-color: #FFB700; /* Darker yellow (Gold) */
+    --secondary-color: #D67C00; /* Burnt Orange / Dark Yellow for accents */
     --background-light: #FEF7C2; /* Light Yellow for background */
     --background-white: #ffffff; /* White background */
     --text-dark: #333; /* Dark text for headings */
