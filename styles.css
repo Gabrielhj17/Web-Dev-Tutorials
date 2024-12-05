@@ -5,67 +5,24 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-/* Header Styles */
-header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2c3e50;
-    text-decoration: none;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 1.5rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #34495e;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #E34F26;
-}
-
-nav ul li a.active {
-    color: #E34F26;
-    font-weight: bold;
-}
-
-/* Main Content */
+/* Main Content Styles */
 main {
-    flex: 1 0 auto;
-    width: 100%;
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 /* Hero Section */
@@ -188,19 +145,5 @@ main {
     .cta-button {
         font-size: 1.1rem;
         padding: 10px 30px;
-    }
-
-    header {
-        flex-direction: column;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    nav ul li {
-        margin: 10px 0;
     }
 }
