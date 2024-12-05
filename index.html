@@ -3,56 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development Tutorials</title>
+    <title>CodeCraft Academy - Web Development Tutorials</title>
+    <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="footer-styles.css">
     <link rel="stylesheet" href="header-styles.css">
+    <link rel="stylesheet" href="footer-styles.css">
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <div class="logo">
-            <a href=".index.html">Web Dev Tutorials</a>
+            <a href="index.html" aria-label="Web Dev Tutorials">Web Dev Tutorials</a>
         </div>
-        <nav>
+        <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="html/html-tutorial-home.html">HTML</a></li>
-                <li><a href="css-tutorial-home.html">CSS</a></li>
-                <li><a href="js/js-tutorial-home.html">JavaScript</a></li>
+                <li><a href="tutorials/html/html-tutorial-home.html">HTML</a></li>
+                <li><a href="tutorials/css/css-tutorial-home.html">CSS</a></li>
+                <li><a href="tutorials/js/js-tutorial-home.html">JavaScript</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Section -->
     <main>
-        <section class="hero">
-            <h1>Learn Web Development</h1>
-            <p>Start your journey with HTML, CSS, and JavaScript</p>
-            <a href="tutorials/html/html-tutorial-home.html" class="cta-button">Start Learning</a>
+        <section class="hero" aria-labelledby="hero-title">
+            <h1 id="hero-title">Master Web Development</h1>
+            <p>Transform your coding skills from beginner to professional</p>
+            <a href="tutorials/start.html" class="cta-button">Start Your Journey</a>
         </section>
 
-        <section class="features">
-            <a href="tutorials/html/html-tutorial-home.html" class="feature-item">
-                <img src="images/html5.png" alt="HTML Icon">
-                <h2>HTML</h2>
-                <p>The foundation of web development, learn how to structure web pages.</p>
-            </a>
-            <a href="tutorials/css/css-tutorial-home.html" class="feature-item">
-                <img src="images/css.png" alt="CSS Icon">
-                <h2>CSS</h2>
-                <p>Master the art of styling your web pages with CSS.</p>
-            </a>
-            <a href="tutorials/js/js-tutorial-home.html" class="feature-item">
-                <img src="images/js.png" alt="JavaScript Icon">
-                <h2>JavaScript</h2>
-                <p>Learn how to add interactivity and logic to your web pages.</p>
-            </a>
+        <section class="features" aria-label="Learning Paths">
+            <div class="feature-item">
+                <img src="images/html5.png" alt="Structured webpage representing HTML fundamentals" aria-hidden="true">
+                <h2>HTML Mastery</h2>
+                <p>Learn to create robust, semantic web structures that are accessible and SEO-friendly.</p>
+                <a href="tutorials/html/html-tutorial-home.html">Explore HTML Courses</a>
+            </div>
+
+            <div class="feature-item">
+                <img src="images/css.png" alt="Color palette and layout grid representing CSS design" aria-hidden="true">
+                <h2>CSS Design</h2>
+                <p>Create stunning, responsive layouts that look great on any device.</p>
+                <a href="tutorials/css/css-tutorial-home.html">Advanced Styling Techniques</a>
+            </div>
+
+            <div class="feature-item">
+                <img src="images/js.png" alt="Animated code blocks representing JavaScript interactivity" aria-hidden="true">
+                <h2>JavaScript Dynamics</h2>
+                <p>Build interactive web applications with modern JavaScript techniques.</p>
+                <a href="tutorials/js/js-tutorial-home.html">Interactive Coding</a>
+            </div>
+        </section>
+
+        <section class="resources" aria-labelledby="resources-title">
+            <h2 id="resources-title">Additional Learning Resources</h2>
+            <div class="resource-grid">
+                <div class="resource-item">
+                    <h3>Video Tutorials</h3>
+                    <p>In-depth video lessons with code walkthroughs</p>
+                </div>
+                <div class="resource-item">
+                    <h3>Code Challenges</h3>
+                    <p>Practice your skills with real-world coding exercises</p>
+                </div>
+                <div class="resource-item">
+                    <h3>Community Forum</h3>
+                    <p>Connect with other developers and get help</p>
+                </div>
+            </div>
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
-        <p>© 2024 Web Dev Tutorials</p>
+        <p>© 2024 CodeCraft Academy</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </footer>
 </body>
 </html>

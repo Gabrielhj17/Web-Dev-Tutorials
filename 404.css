@@ -1,0 +1,67 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f6f8;
+    color: #2c3e50;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.not-found-container {
+    max-width: 600px;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.not-found-container h1 {
+    font-size: 6rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.not-found-container p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #7f8c8d;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 1rem;
+    color: white;
+    background-color: #3498db;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #2980b9;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

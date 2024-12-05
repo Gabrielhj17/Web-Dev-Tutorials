@@ -1,11 +1,14 @@
 /* Header Styles */
 header {
     background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo a {
@@ -13,31 +16,57 @@ header {
     font-weight: bold;
     color: #2c3e50;
     text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo a:hover {
+    transform: scale(1.05);
+    color: #3498db;
 }
 
 nav ul {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 nav ul li {
     margin-left: 1.5rem;
+    position: relative;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #34495e;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    padding: 0.3rem 0;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 nav ul li a:hover {
-    color: #E34F26;
+    color: #3498db;
+    transform: translateY(-2px);
 }
 
 nav ul li a.active {
-    color: #E34F26;
-    font-weight: bold;
+    color: #3498db;
+    font-weight: 600;
 }
 
 /* Responsive Header Styles */
@@ -45,6 +74,11 @@ nav ul li a.active {
     header {
         flex-direction: column;
         text-align: center;
+        padding: 1rem;
+    }
+
+    .logo a {
+        margin-bottom: 1rem;
     }
 
     nav ul {
@@ -55,5 +89,11 @@ nav ul li a.active {
 
     nav ul li {
         margin: 0.5rem 0;
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        text-align: center;
     }
 }
